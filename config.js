@@ -47,27 +47,33 @@ var config = {
             widgets: [
                 {
                     type: 'github.user_badge',
-                    user: 'plouc',
+                    user: 'mbwhite',
                     columns: 1, rows: 1,
                     x: 0, y: 0
                 },
                 {
                     type: 'github.repository_contributors_stats',
-                    repository: 'plouc/mozaik',
+                    repository: 'fabric-composer/fabric-composer',
                     columns: 1, rows: 1,
                     x: 2, y: 0
                 },
                 {
                     type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'fabric-composer',
+                    repository: 'fabric-composer',
                     columns: 1, rows: 1,
                     x: 1, y: 0
                 },
                 {
+                  type: 'github.issue_labels_donut',
+                  repository: 'fabric-composer/fabric-composer',
+                  columns: 1, rows: 1,
+                  x: 0, y: 1
+              },
+                  {
                     type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'fabric-composer',
+                    repository: 'fabric-composer',
                     columns: 2, rows: 1,
                     x: 1, y: 1
                 },
@@ -76,31 +82,18 @@ var config = {
                     columns: 1, rows: 1,
                     x: 3, y: 0
                 },
-                {
-                    type: 'weather.weather',
-                    city: 'Tokyo',
-                    country: 'JP',
-                    lang: 'en',
-                    limit: 2,
-                    columns: 1, rows: 1,
-                    x: 0, y: 1
-                },
+
                 {
                     type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'fabric-composer',
+                    repository: 'fabric-composer',
                     columns: 1, rows: 2,
                     x: 3, y: 1
                 },
+
                 {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'go-gitlab-client',
-                    columns: 2, rows: 1,
-                    x: 1, y: 2
-                },
-                {
-                    type: 'github.status',
+                    type: 'github.pull_requests_gauge',
+                    repository: 'fabric-composer/fabric-composer',
                     columns: 1, rows: 1,
                     x: 0, y: 2
                 }
