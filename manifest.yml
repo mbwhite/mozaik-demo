@@ -1,0 +1,4 @@
+applications:
+- name: fc-dashboard
+  random-route: true
+  memory: 128M

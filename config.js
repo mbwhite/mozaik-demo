@@ -45,37 +45,43 @@ var config = {
             columns: 4,
             rows:    3,
             widgets: [
-                {
-                    type: 'github.user_badge',
-                    user: 'mbwhite',
-                    columns: 1, rows: 1,
-                    x: 0, y: 0
-                },
+
                 {
                     type: 'github.repository_contributors_stats',
                     repository: 'fabric-composer/fabric-composer',
-                    columns: 1, rows: 1,
-                    x: 2, y: 0
+                    columns: 1, rows: 2,
+                    x: 2, y: 1, title :'Contributors'
                 },
+                {
+  type: 'github.organization_badge',
+  organization: 'fabric-composer',
+  columns: 1, rows: 1, x: 0, y: 0
+},
                 {
                     type: 'travis.repository',
                     owner: 'fabric-composer',
                     repository: 'fabric-composer',
                     columns: 1, rows: 1,
-                    x: 1, y: 0
+                    x: 0, y: 1, title : 'Last Build'
                 },
                 {
-                  type: 'github.issue_labels_donut',
-                  repository: 'fabric-composer/fabric-composer',
-                  columns: 1, rows: 1,
-                  x: 0, y: 1
-              },
+    type: 'github.issue_labels_treemap',
+    repository: 'fabric-composer/fabric-composer',
+    labels: [
+        { color: '#6bc2c8', count: 13, name: 'P1'     },
+        { color: '#5f8cc0', count: 3,  name: 'enhancement' },
+        { color: '#525487', count: 7,  name: 'bug'         },
+        { color: '#383b72', count: 16, name: 'playback 3' }
+    ],
+    columns: 1, rows: 2,
+    x: 3, y: 1, title: 'Issues'
+},
                   {
                     type: 'travis.build_histogram',
                     owner: 'fabric-composer',
                     repository: 'fabric-composer',
                     columns: 2, rows: 1,
-                    x: 1, y: 1
+                    x: 1, y: 0
                 },
                 {
                     type: 'time.clock',
@@ -88,7 +94,7 @@ var config = {
                     owner: 'fabric-composer',
                     repository: 'fabric-composer',
                     columns: 1, rows: 2,
-                    x: 3, y: 1
+                    x: 1, y: 1, title: 'Build History'
                 },
 
                 {
@@ -101,40 +107,40 @@ var config = {
         },
 
         // second dashboard
-        {
-            // 3 x 2 dashboard
-            columns: 3,
-            rows:    2,
-            widgets: [
-                {
-                    type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 2,
-                    x: 0, y: 0
-                },
-                {
-                    type: 'github.user_badge',
-                    user: 'plouc',
-                    columns: 1, rows: 1,
-                    x: 2, y: 0
-                },
-                {
-                    type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 1,
-                    x: 1, y: 0
-                },
-                {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 2, rows: 1,
-                    x: 1, y: 1
-                }
-            ]
-        }
+        // {
+        //     // 3 x 2 dashboard
+        //     columns: 3,
+        //     rows:    2,
+        //     widgets: [
+        //         {
+        //             type: 'travis.build_history',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 1, rows: 2,
+        //             x: 0, y: 0
+        //         },
+        //         {
+        //             type: 'github.user_badge',
+        //             user: 'plouc',
+        //             columns: 1, rows: 1,
+        //             x: 2, y: 0
+        //         },
+        //         {
+        //             type: 'travis.repository',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 1, rows: 1,
+        //             x: 1, y: 0
+        //         },
+        //         {
+        //             type: 'travis.build_histogram',
+        //             owner: 'plouc',
+        //             repository: 'mozaik',
+        //             columns: 2, rows: 1,
+        //             x: 1, y: 1
+        //         }
+        //     ]
+        // }
     ]
 };
 
